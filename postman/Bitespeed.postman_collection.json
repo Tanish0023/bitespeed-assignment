@@ -1,0 +1,402 @@
+{
+	"info": {
+		"_postman_id": "dd4f990a-223a-4a45-b899-abf7f7e2fe7b",
+		"name": "Bitespeed",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32072230"
+	},
+	"item": [
+		{
+			"name": "Primary and Secondary",
+			"item": [
+				{
+					"name": "Create Primary",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"lorraine@hillvalley.edu\",\n    \"phoneNumber\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/identify",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"identify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Secondary",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"mcfly@hillvalley.edu\",\n    \"phoneNumber\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/identify",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"identify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Email Null Check",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": null,\n    \"phoneNumber\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/identify",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"identify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mobile Null Check",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"mcfly@hillvalley.edu\",\n    \"phoneNumber\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/identify",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"identify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Both Null Check",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": null,\n    \"phoneNumber\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/identify",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"identify"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Primary to Secondary",
+			"item": [
+				{
+					"name": "First Primary",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"george@hillvalley.edu\",\n    \"phoneNumber\": \"919191\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/identify",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"identify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Second Primary",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"biffsucks@hillvalley.edu\",\n    \"phoneNumber\": \"717171\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/identify",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"identify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Primary to Secondary",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"george@hillvalley.edu\",\n    \"phoneNumber\": \"717171\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/identify",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"identify"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Two Secondary from different primary match",
+			"item": [
+				{
+					"name": "First Primary",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"3george@hillvalley.edu\",\n  \"phoneNumber\": \"3919191\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/identify",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"identify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "First Secondary",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"3doc@hillvalley.edu\",\n  \"phoneNumber\": \"3919191\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/identify",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"identify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Second Primary",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"3biff@hillvalley.edu\",\n  \"phoneNumber\": \"3717171\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/identify",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"identify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Second Secondary",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"3bully@hillvalley.edu\",\n  \"phoneNumber\": \"3717171\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/identify",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"identify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Combining Both",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"3doc@hillvalley.edu\",\n  \"phoneNumber\": \"3717171\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/identify",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"identify"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

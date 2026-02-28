@@ -90,6 +90,18 @@ npm run start
 
 The server will start at `http://localhost:3000`
 
+## API Testing (Postman)
+
+A Postman collection is included in the `/postman` folder.
+
+Steps to test:
+
+1. Import the collection and environment into Postman.
+2. Update the `base_url` variable in the environment with the deployed API URL.
+3. Run any request from the collection.
+
+All requests are preconfigured to demonstrate different identity reconciliation scenarios.
+
 ## How to Use the API
 
 ### Endpoint
